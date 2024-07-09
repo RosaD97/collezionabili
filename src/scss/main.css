@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.cards {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+@media screen and (max-width: 400px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.starter {
+  height: 65vh;
+  color: #fff;
+  position: relative;
+}
+.starter .modale-starter {
+  color: #000;
+  position: absolute;
+  top: 10px;
+  left: 35%;
+}
+.starter .modale-starter .img-wrapper {
+  width: 70%;
+}
+.starter .modale-starter .img-wrapper img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+}
+
+.pokeball {
+  display: inline-block;
+  margin: 20px;
+  width: 100px;
+  height: 100px;
+  background: #b71c1c;
+  border-radius: 50%;
+  box-shadow: inset 0 -72px 0 -37px #fff, inset 0 -76px 0 -35px #000, 0 0 0 5px #000;
+  position: relative;
+  transition: 0.4s;
+  transform-origin: bottom center;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.pokeball:before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+  top: 50px;
+  left: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 5px #fff, 0 0 0 10px #000;
+}
+.pokeball:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset -7px 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+.pokeball:hover {
+  cursor: pointer;
+  animation: anti-wiggle 1s ease-in-out;
+}
+.pokeball:hover:after {
+  animation: wiggle 1s ease-in-out;
+}
+.pokeball:focus, .pokeball:active {
+  outline: 0;
+}
+
+@keyframes wiggle {
+  20% {
+    box-shadow: inset -5px 0 5px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(7deg);
+  }
+  40% {
+    box-shadow: inset -11px 0 5px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(-14deg);
+  }
+  60% {
+    box-shadow: inset -5px 0 5px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(4deg);
+  }
+  80% {
+    box-shadow: inset -8px 0 5px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(-2deg);
+  }
+  100% {
+    box-shadow: inset -7px 0 5px 0 rgba(0, 0, 0, 0.4);
+    transform: rotate(0deg);
+  }
+}
+@keyframes anti-wiggle {
+  20% {
+    transform: translateX(4px) rotate(-7deg);
+  }
+  40% {
+    transform: translateX(-8px) rotate(14deg);
+  }
+  60% {
+    transform: translateX(2px) rotate(-4deg);
+  }
+  80% {
+    transform: translateX(-1px) rotate(2deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+.sectionGame {
+  height: 70vh;
+  background-color: rgb(43, 42, 42);
+}
+
+.game {
+  height: 402px;
+  background: url("https://github.com/ZeChrales/PogoAssets/blob/master/static_assets/png/Parkscene_Background.png?raw=true") center top, url("https://github.com/ZeChrales/PogoAssets/blob/master/static_assets/png/SkyDay.png?raw=true") center top/cover;
+}
+.game .battle-cont {
+  display: flex;
+  justify-content: space-between;
+}
+.game .img-wrapper {
+  height: 200px;
+}
+.game .img-wrapper img {
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.game .result {
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.header {
+  background-color: rgb(43, 42, 42);
+  color: yellow;
+}
+.header .container nav ul {
+  list-style: none;
+}
+.header .container nav ul li .navtitle {
+  color: yellow;
+  text-decoration: none;
+}
+.header .container nav ul li .navtitle:hover {
+  color: rgb(255, 0, 0);
+}
+.header .container .img-wrapper {
+  width: 80px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  cursor: pointer;
+}
+.header .container .img-wrapper img {
+  width: 100%;
+}
+
+.footer {
+  background-color: rgb(43, 42, 42);
+  color: yellow;
+}
+
+.mycard {
+  color: #fff;
+  height: 500px;
+  background-color: #c01818;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: -3px -3px 3px 0 rgba(38, 230, 247, 0.6), 3px 3px 3px 0 rgba(247, 89, 228, 0.6), 0 0 6px 2px rgba(255, 231, 89, 0.6), 0 35px 25px -15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 20px 10px;
+  align-items: center;
+  text-align: center;
+}
+.mycard img {
+  width: 70%;
+}
+
+.mycard > span {
+  position: relative;
+  top: 45%;
+}
+
+.mycard:before,
+.mycard:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-image: linear-gradient(115deg, transparent 0%, rgb(0, 231, 255) 30%, rgb(255, 0, 231) 70%, transparent 100%);
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.mycard:after {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/13471/sparkles.gif");
+  background-position: center;
+  background-size: 180%;
+  mix-blend-mode: color-dodge;
+  opacity: 1;
+  z-index: 2;
+}
+
+.mycard.active:before {
+  opacity: 1;
+  animation: none;
+  transition: none;
+  background-image: linear-gradient(115deg, transparent 0%, transparent 25%, rgba(0, 231, 255, 0.7) 45%, rgba(255, 0, 231, 0.7) 55%, transparent 70%, transparent 100%);
+}
+
+.mycard:nth-of-type:before, .mycard:nth-of-type:after {
+  animation: none;
+  opacity: 1;
+}
+
+.mycard:nth-of-type {
+  background: none;
+}
+.mycard:nth-of-type:before {
+  background-position: center;
+}
+.mycard:nth-of-type:after {
+  display: none;
+}
+
+.operator {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 45px;
+}
+
+@keyframes holoSparkle {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  95% {
+    opacity: 0.2;
+  }
+}
+@keyframes holoGradient {
+  3% {
+    opacity: 0;
+  }
+  5% {
+    background-position: 0% 0%;
+  }
+  7% {
+    opacity: 0.5;
+  }
+  9% {
+    background-position: 100% 100%;
+  }
+  11% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    background-position: 100% 100%;
+  }
+  55% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
+    background-position: 0% 0%;
+  }
+}
+.mybtn {
+  background-color: #26e6f7;
+  z-index: 99;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
